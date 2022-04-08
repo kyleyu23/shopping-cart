@@ -1,0 +1,16 @@
+nav nav>* {
+    /* border-style: solid; */
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: #a4c2ff;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    column-gap: 1rem;
+}
