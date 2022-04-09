@@ -1,1 +1,1 @@
-This project is created using React Router and React Testing.
+This project is created by making use of React Router and React Testing.

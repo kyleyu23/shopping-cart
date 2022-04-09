@@ -3,9 +3,51 @@
   padding: 0;
 }
 
+:root {
+  --main-bg-color: rgb(55, 55, 55);
+  --main-text-color: white;
+  --secondary-color: #a4c2ff;
+}
+
 .app {
-  background-color: rgb(55, 55, 55);
-  color: white;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   text-align: center;
   min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+}
+
+.item {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.item button {
+  color: var(--main-bg-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  padding-block: 0.4rem;
+  padding-inline: 2rem;
+  /* border-radius: 1rem; */
+}
+
+.price::before {
+  content: "$";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
 }
