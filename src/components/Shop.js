@@ -1,3 +1,4 @@
+import React from 'react';
 import Item from "./Item";
 
 import WRX from '../media/Bunta_Impreza_Fourth_Stage.webp';
@@ -11,24 +12,31 @@ import EVO3 from '../media/Kyoichi_Evo_III_Final_Stage.webp';
 import EVO7 from '../media/Team_246_Lan_EVO_VII_Ingame.webp';
 import MR2 from '../media/Kogashiwa_MR2_Third_Stage.webp';
 
-const item = [
-    { name: "Subaru Impreza WRX STi", image: WRX, price: 29999 },
-    { name: "Toyota Corolla AE86", image: AE86 },
-    { name: "Mazda RX-7 FD3S", image: FD },
-    { name: "Mazda RX-7 FC3S", image: FC },
-    { name: "Nissan Skyline GT-R R32", image: R32 },
-    { name: "Nissan SilEighty RPS13", image: SilEighty },
-    { name: "Honda S2000", image: S2000 },
-    { name: "Mitsubishi Lancer Evolution III", image: EVO3 },
-    { name: "Mitsubishi Lancer Evolution VII", image: EVO7 },
-    { name: "Toyota MR2", image: MR2 }
+const items = [
+    { name: "WRX STi", image: WRX, price: 29999 },
+    { name: "AE86", image: AE86, price: 29999 },
+    { name: "FD3S", image: FD, price: 29999 },
+    { name: "FC3S", image: FC, price: 29999 },
+    { name: "R32", image: R32, price: 29999 },
+    { name: "RPS13", image: SilEighty, price: 29999 },
+    { name: "S2000", image: S2000, price: 29999 },
+    { name: "Evo III", image: EVO3, price: 29999 },
+    { name: "Evo VII", image: EVO7, price: 29999 },
+    { name: "MR2", image: MR2, price: 29999 }
 ]
 
+
 function Shop() {
+
     return (
-        <div>
-            <h1>Shop Page</h1>
-            <Item item={item[0]} />
+        <div className="shop">
+            {/* <h1>Shop Page</h1> */}
+            {items.map(item => (
+                <Item
+                    item={item}
+                    key={item.name}
+                />
+            ))}
         </div>
     );
 }
