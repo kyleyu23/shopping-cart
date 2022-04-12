@@ -16,7 +16,7 @@ function Item(props) {
             <div className="container">
                 <div className="item-info">
                     <h3>{item.name}</h3>
-                    <p className="price">{item.price.toLocaleString(undefined, 0)}</p>
+                    <p className="price">{item.price}</p>
                 </div>
                 <button type="button" onClick={addToCart}>Add to Cart</button>
             </div>

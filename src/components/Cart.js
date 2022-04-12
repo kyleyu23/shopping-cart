@@ -3,12 +3,20 @@ import { CartContext } from '../CartContext';
 
 function Cart() {
     const [cart, setCart] = useContext(CartContext);
+    const subtotal = 666666;
     return (
-        <div>
-            <h1>Cart Page</h1>
+        <div className='cart'>
             {cart.map(item => (
-                <h3>{item.name}</h3>
+                <div className='cart-item'>
+                    <h3>{item.name}</h3>
+                    <p>{item.price}</p>
+                </div>
             ))}
+            <div className='subtotal'>
+                <h1>Subtotal</h1>
+                <p>{subtotal}</p>
+            </div>
+            <button type='button'>Check Out</button>
         </div>
     );
 }
