@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import '../App.css'
+import React, { useContext } from 'react';
+import { CartContext } from '../CartContext';
 
 function Nav() {
     const navStyle = {
-        color: '#a4c2ff',
+        color: 'white',
         textDecoration: 'none'
     };
+
+    const [cart, setCart] = useContext(CartContext);
 
     return (
         <nav>
@@ -22,6 +26,7 @@ function Nav() {
                 <Link to="/cart" style={navStyle}>
                     <li>Cart</li>
                 </Link>
+                <div className='items-in-cart'>{cart.length}</div>
             </ul>
 
         </nav>
