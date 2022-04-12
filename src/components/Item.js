@@ -3,6 +3,7 @@ import { CartContext } from '../CartContext';
 
 function Item(props) {
     const { item } = props;
+    const formmatedPrice = item.price.toLocaleString(undefined, 0);
     const [cart, setCart] = useContext(CartContext);
 
     function addToCart() {
@@ -16,7 +17,7 @@ function Item(props) {
             <div className="container">
                 <div className="item-info">
                     <h3>{item.name}</h3>
-                    <p className="price">{item.price}</p>
+                    <p className="price">{formmatedPrice}</p>
                 </div>
                 <button type="button" onClick={addToCart}>Add to Cart</button>
             </div>

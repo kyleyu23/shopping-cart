@@ -2,8 +2,8 @@
 
 function Home() {
     return (
-        <div>
-            <h1>Home Page</h1>
+        <div className="home">
+            <h1>Let's get a car and start drifting!</h1>
         </div>
     );
 }
